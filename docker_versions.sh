@@ -24,6 +24,6 @@ do
 	printf "docker inspect -f '{{ index .Config.Labels "build_version" }}' $IMAGE\n"
 
 	printf "Container version for : $DOCKER\n"
-	printf "docker inspect -f '{{ index .Config.Labels "build_version" }}' $NAME\n"
+	printf "docker inspect -f '{{ index .Config.Labels "build_version" }}' $NAME\n\n"
 
 done
