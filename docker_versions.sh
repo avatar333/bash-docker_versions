@@ -15,7 +15,7 @@ then
 	exit 1
 fi
 
-for DOCKER in $(docker ps -a | grep -v IMAGE| awk '{print $10}')
+for DOCKER in $(docker ps -a | grep -v IMAGE| awk '{print $2}')
 do
 	IMAGE=$(docker ps -a | grep $DOCKER | awk '{print $2}')
 	NAME=$(docker ps -a | grep $DOCKER | awk '{print $10}')
